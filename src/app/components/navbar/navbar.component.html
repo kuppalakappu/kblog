@@ -1,0 +1,4 @@
+<div class="container">
+    <div [ngClass]="nav===selectedMenu?'navItem active':'navItem'" *ngFor="let nav of menu" (click)="setMenu(nav)">{{nav}}</div>
+
+</div>
