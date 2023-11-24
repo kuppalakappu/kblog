@@ -1,4 +1,17 @@
 <div class="container">
-    <div [ngClass]="nav===selectedMenu?'navItem active':'navItem'" *ngFor="let nav of menu" (click)="setMenu(nav)">{{nav}}</div>
-
+    <div [ngClass]="nav===selectedMenu?'navItem active':'navItem'" *ngFor="let nav of menu" (click)="setMenu(nav)">{{nav}}
+       
+    </div>
+  
 </div>
+<div class="subNav" *ngIf="selectedMenu">
+    <div class="subContainer">
+    <div [ngClass]="nav===selectedSubMenu?'navItem active':'navItem'" *ngFor="let nav of submenu" (click)="setSubMenu(nav)">{{nav}}
+       
+    </div>
+</div>
+    <div class="close" (click)="close()">
+        X
+    </div>
+</div>
+<app-mydocs *ngIf = "selectedSubMenu =='Docs'"></app-mydocs>

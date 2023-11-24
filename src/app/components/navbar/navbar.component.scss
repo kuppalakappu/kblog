@@ -15,3 +15,28 @@
         color:$darkGreen;
     }
 }
+
+.subContainer{
+    @extend .container;
+    background-color:$paleGreen;
+    color:$darkGreen;
+    .active{
+        background-color: $lightGreen;
+    color:$paleGreen;
+    }
+}
+.subNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:$paleGreen;
+    .close{
+        color:$darkGreen;
+        padding: 20px;
+        font-weight: 800;
+        cursor: pointer;
+        &:hover{
+            background-color:$midGreen;
+        }
+    }
+}

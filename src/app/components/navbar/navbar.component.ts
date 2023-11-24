@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 menu=['Html','Css','JavaScript','C#','SQL','ANgular','.Net','Ssis','Ssrs','oops','Azure','Other']
 selectedMenu=''
+selectedSubMenu=''
+submenu=['Docs','Videos','Urls','ReadMe']
 setMenu(nav:string){
   this.selectedMenu=nav
+}
+setSubMenu(nav:string){
+  this.selectedSubMenu=nav
+}
+close(){
+  this.selectedMenu=''
+  this.selectedSubMenu=''
 }
 }

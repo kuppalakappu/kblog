@@ -1,0 +1,44 @@
+@import '../../../styles.scss';
+
+.container{
+    display:flex;
+    justify-content: space-between;
+    gap :10px;
+    height: 90vh;
+    .left{
+        width:15%;
+        height:100%;
+        background-color: $paleGreen;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $darkGreen;
+        border-right: 10px solid $darkGreen;
+        .navItem{
+            padding:10px;
+            cursor: pointer;
+
+        }
+        .active{
+            color: $paleGreen;
+            background-color: $darkGreen;
+        }
+    }
+    .content{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        .doc{
+            width: 100%;
+            padding: 10px 0;
+            .link{
+                text-decoration: none;
+                width:100%;
+                height:100%;
+
+            }
+        }
+
+    }
+}
