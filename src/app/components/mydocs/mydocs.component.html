@@ -1,10 +1,22 @@
 <div class="container">
-    <nav class="left"  >   
-        <p [ngClass]="selectedMenu==menu?'navItem active':'navItem'"  *ngFor ="let menu of menuList"  (click)="setMenu(menu)">{{menu}}</p>
-    </nav>
-    <div class="content">  
-        <p class="doc"  *ngFor = "let d of docList" >
-            <a href="{{d.path}}" frameborder="0" download="{{d.title}}" class="link">{{d.title}}</a>
-                        
-    </div>
+  <nav class="left">
+    <p
+      [ngClass]="selectedMenu == menu ? 'navItem active' : 'navItem'"
+      *ngFor="let menu of menuList"
+      (click)="setMenu(menu)"
+    >
+      {{ menu }}
+    </p>
+  </nav>
+  <div class="content">
+    <p class="doc" *ngFor="let d of docList">
+      <a
+        href="{{ d.path }}"
+        frameborder="0"
+        download="{{ d.title }}"
+        class="link"
+        >{{ d.title }}</a
+      >
+    </p>
+  </div>
 </div>

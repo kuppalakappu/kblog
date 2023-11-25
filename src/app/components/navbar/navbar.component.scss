@@ -1,42 +1,42 @@
 @import '../../../styles.scss';
-.container{
-    background-color: $darkGreen;
-    color:$paleGreen;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    .navItem{
-        padding:20px;
-        text-align: center;
-        cursor: pointer;
-    }
-    .active{
-        background-color:$paleGreen;
-        color:$darkGreen;
-    }
+.container {
+  background-color: $darkGreen;
+  color: $paleGreen;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  .navItem {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .active {
+    background-color: $paleGreen;
+    color: $darkGreen;
+  }
 }
 
-.subContainer{
-    @extend .container;
-    background-color:$paleGreen;
-    color:$darkGreen;
-    .active{
-        background-color: $lightGreen;
-    color:$paleGreen;
-    }
+.subContainer {
+  @extend .container;
+  background-color: $paleGreen;
+  color: $darkGreen;
+  .active {
+    background-color: $lightGreen;
+    color: $paleGreen;
+  }
 }
-.subNav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:$paleGreen;
-    .close{
-        color:$darkGreen;
-        padding: 20px;
-        font-weight: 800;
-        cursor: pointer;
-        &:hover{
-            background-color:$midGreen;
-        }
+.subNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $paleGreen;
+  .close {
+    color: $darkGreen;
+    padding: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    &:hover {
+      background-color: $midGreen;
     }
+  }
 }
