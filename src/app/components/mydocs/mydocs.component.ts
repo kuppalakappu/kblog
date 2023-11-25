@@ -1,29 +1,30 @@
 import { Component } from '@angular/core';
+import type { Menu } from './mydocs.types';
 
 @Component({
-  selector: 'app-mydocs',
-  templateUrl: './mydocs.component.html',
-  styleUrls: ['./mydocs.component.scss'],
+	selector: 'app-mydocs',
+	templateUrl: './mydocs.component.html',
+	styleUrls: ['./mydocs.component.scss'],
 })
 export class MydocsComponent {
-  menuList = ['sqlnote', 'cnote', 'htmlnote'];
+	docList: Menu[] = [
+		{
+			title: 'HTMLone',
+			path: 'https://docs.google.com/document/d/e/2PACX-1vQRl5UtOTv16LUBNAd5pDS7GhEg186fvlKrxfgqqFhQHztHKF56KY7E7q6K1_x5tDyCyo-y2-vvQgMI/pub',
+		},
+		{
+			title: 'HTMLTwo',
+			path: 'https://docs.google.com/document/d/e/2PACX-1vQRl5UtOTv16LUBNAd5pDS7GhEg186fvlKrxfgqqFhQHztHKF56KY7E7q6K1_x5tDyCyo-y2-vvQgMI/pub',
+		},
+		{
+			title: 'HTMLThree',
+			path: 'https://docs.google.com/document/d/e/2PACX-1vQRl5UtOTv16LUBNAd5pDS7GhEg186fvlKrxfgqqFhQHztHKF56KY7E7q6K1_x5tDyCyo-y2-vvQgMI/pub',
+		},
+	];
 
-  selectedMenu: string = this.menuList[0];
-  docList = [
-    {
-      title: 'HTMLone',
-      path: 'https://docs.google.com/document/d/1QPIvAFMHtuQh04FjUrbFD-2SNSjW4zs1TGSPtiNxfNY/edit?usp=sharing',
-    },
-    {
-      title: 'HTMLTwo',
-      path: 'https://docs.google.com/document/d/15jzMXPjuVZB8P9bmkQfvko5JUi-s_E8_M6VcgLMBpCk/edit',
-    },
-    {
-      title: 'HTMLThree',
-      path: '../../../assets/docs/SQL Quick Ref.docs&embedded=true',
-    },
-  ];
-  setMenu(menu: string) {
-    this.selectedMenu = menu;
-  }
+	selectedMenu: Menu = this.docList[0];
+	setMenu(menu: Menu) {
+		this.selectedMenu = menu;
+		window.location.href = menu.path;
+	}
 }

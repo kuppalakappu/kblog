@@ -6,11 +6,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MydocsComponent } from './components/mydocs/mydocs.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, MydocsComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
-  bootstrap: [AppComponent],
+	declarations: [
+		AppComponent,
+		NavbarComponent,
+		HomeComponent,
+		MydocsComponent,
+		VideosComponent,
+	],
+	imports: [BrowserModule, AppRoutingModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

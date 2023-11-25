@@ -1,0 +1,13 @@
+<div class="container">  
+    <div class="content">
+      <div class="doc">
+        <div  *ngFor="let d of docList">
+        <video autoplay controls>
+            <source [src]="'../../../assets/videos/'+d.path"/>
+            
+        </video>
+        <main class="title">{{d.title}}</main>
+    </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+@import '../../../styles.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  height: 90vh;
+
+  .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .doc {
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      gap:20px;
+      flex-wrap: wrap;
+      video {
+        text-decoration: none;
+        width:700px;
+        height:400px;
+      
+      }
+      .title{
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color:$darkGreen;
+      }
+    }
+  }
+}
