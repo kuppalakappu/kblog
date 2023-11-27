@@ -1,0 +1,21 @@
+@import '../../../styles.scss';
+.container{
+    padding:20px;
+    color:$darkGreen;
+    .header{
+        font-size: 40px;
+        text-align: center;
+        font-weight: 800;
+    }
+    .desc{
+        font-size: 18px;
+        font-style: italic;
+        .subContainer{
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,14 +1,25 @@
 <div class="container">
-  <nav class="left">
+  <nav class="left"  *ngIf="!isUrl">
     <p
-      [ngClass]="selectedMenu.title == menu.title ? 'navItem active' : 'navItem'"
+      class= 'navItem'
       *ngFor="let menu of docList"
       (click)="setMenu(menu)"
-   
+ 
      
     >
       {{ menu.title }}
   </p>
+
   </nav>
+  <nav class="left"   *ngIf="isUrl">  
+    <p
+    class= 'navItem'
+    *ngFor="let menu of urlList"
+    (click)="setMenu(menu)"
+
+   
+  >
+    {{ menu.title }}
+  </p></nav>
 
 </div>

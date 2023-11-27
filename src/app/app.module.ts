@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MydocsComponent } from './components/mydocs/mydocs.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { ReadmenoteComponent } from './components/readmenote/readmenote.component';
 
 @NgModule({
 	declarations: [
@@ -15,6 +16,7 @@ import { VideosComponent } from './components/videos/videos.component';
 		HomeComponent,
 		MydocsComponent,
 		VideosComponent,
+		ReadmenoteComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],

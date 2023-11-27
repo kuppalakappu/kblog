@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import type { Menu } from './mydocs.types';
 
 @Component({
@@ -7,6 +7,7 @@ import type { Menu } from './mydocs.types';
 	styleUrls: ['./mydocs.component.scss'],
 })
 export class MydocsComponent {
+	@Input() isUrl = false;
 	docList: Menu[] = [
 		{
 			title: 'HTMLone',
@@ -22,9 +23,22 @@ export class MydocsComponent {
 		},
 	];
 
-	selectedMenu: Menu = this.docList[0];
+	urlList: Menu[] = [
+		{
+			title: 'urLone',
+			path: 'https://docs.google.com/document/d/e/2PACX-1vQRl5UtOTv16LUBNAd5pDS7GhEg186fvlKrxfgqqFhQHztHKF56KY7E7q6K1_x5tDyCyo-y2-vvQgMI/pub',
+		},
+		{
+			title: 'urLTwo',
+			path: 'https://docs.google.com/document/d/e/2PACX-1vQRl5UtOTv16LUBNAd5pDS7GhEg186fvlKrxfgqqFhQHztHKF56KY7E7q6K1_x5tDyCyo-y2-vvQgMI/pub',
+		},
+		{
+			title: 'urLThree',
+			path: 'https://docs.google.com/document/d/e/2PACX-1vQRl5UtOTv16LUBNAd5pDS7GhEg186fvlKrxfgqqFhQHztHKF56KY7E7q6K1_x5tDyCyo-y2-vvQgMI/pub',
+		},
+	];
+
 	setMenu(menu: Menu) {
-		this.selectedMenu = menu;
 		window.location.href = menu.path;
 	}
 }

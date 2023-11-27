@@ -21,3 +21,5 @@
 </div>
 <app-mydocs *ngIf="selectedSubMenu == 'Docs'"></app-mydocs>
 <app-videos *ngIf="selectedSubMenu == 'Videos'"></app-videos>
+<app-mydocs *ngIf="selectedSubMenu == 'Urls'" [isUrl]="true"></app-mydocs>
+<app-readmenote *ngIf="selectedSubMenu=='ReadMe'"></app-readmenote>
